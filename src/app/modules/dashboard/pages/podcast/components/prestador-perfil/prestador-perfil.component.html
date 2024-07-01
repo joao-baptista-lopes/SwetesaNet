@@ -1,0 +1,52 @@
+<div   class="banner" style="background: #f2efe3; height: 100vh;" *ngIf="prestador">
+    <div class="container" >
+      <div class="cabecalho">
+        <div class="perfil">
+          <div class="avatar">
+            <div class="w-24 rounded-full ring ring-blue ring-offset-base-100 ring-offset-2">
+              <img src="assets/images/prestador.jpg" />
+            </div>
+          </div>
+          <h2 style="font-size: 28px; font-weight: 600;">{{prestador.nome}}</h2>
+          <p >{{prestador.profissao}}</p>
+          <p>Classificação: {{prestador.avaliacao || 'Sem Avaliação'}}</p>
+          <p style="font-weight: 500;">Acerca de Mim</p>
+          <hr style="border: 2px solid blue;">
+          <p>Oi, eu sou o Márcio! Tenho trabalhado como jardineiro há mais de 10 anos e sou completamente apaixonado pelo que faço. Transformar jardins e espaços verdes é o que me motiva todos os dias.
+
+            Comecei na jardinagem como um hobby, cuidando do meu próprio quintal, e aos poucos fui me especializando e pegando projetos maiores. Hoje, tenho experiência em tudo, desde cuidar de pequenas hortas domésticas até projetos de paisagismo em larga escala. Adoro ver a transformação dos espaços e a felicidade que um belo jardim pode trazer para as pessoas.
+            
+            Gosto de criar jardins que sejam bonitos e ao mesmo tempo práticos e sustentáveis. Estou sempre aprendendo sobre novas plantas e técnicas para deixar os jardins mais bonitos e saudáveis.
+            
+            Se você está procurando alguém para cuidar do seu jardim ou transformar seu espaço verde, adoraria ajudar. Vamos conversar e trazer mais natureza para a sua vida!</p>
+        </div>
+  
+        <div class="card card-side shadow-xl">
+          <div class="card w-96 text-primary-content" style="background-color: white;">
+            <div class="card-body">
+              <h2 class="card-title">Nome do prestador</h2>
+              <p>Tempo de resposta: <span>1 h</span></p>
+              <div class="card-actions justify-start">
+                <button class="btn" (click)="contactarPrestador(prestador.contacto)">WhatsApp</button>
+                <button class="btn" (click)="ligarParaPrestador(prestador.contacto)">Ligar</button>
+
+                <p>Tempo que demora a respoder: <span>20min</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- <div class="trabalhos">
+        <div class="texto">
+          <h5>
+            <div class="d-flex align-items-center">
+              <hr class="linha-horizontal">
+              <p class="titulo-noticias">Imagens de serviços já feitos</p>
+            </div>
+          </h5>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  

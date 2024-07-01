@@ -1,0 +1,41 @@
+<app-modal></app-modal>
+<div class="banner" style="
+background: #f2efe3;
+/* background: url(assets/images/Fundo-azul-website.jpeg); */
+">
+  <section>
+    <div class="texto">
+        <h5>
+            <div class="d-flex align-items-center">
+                <hr class="linha-horizontal">
+                <p class="titulo-noticias">Serviços Disponíveis</p>
+            </div>
+        </h5>
+        <h3>Conheça os <span>Serviços</span> oferecidos pelos prestadores</h3>
+    </div>
+    
+     <div class="cards" >
+      <div  *ngFor="let entry of entries" class="card"  >
+        <div class="card-img-wrapper" >
+          <!-- <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Joss Anderson"> -->
+          <img src="assets/images/prestador.jpg" alt="Joss Anderson">
+        </div>
+        <a  class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+        <div class="card-content-wrapper">
+          <a  class="card-content">
+            <h3>{{ entry.fields.nome }}</h3>
+            <p >{{entry.fields.profissao}}</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
+            </div>
+
+            <button [routerLink]="['/dashboard/podcast', entry.fields.slug]">Ver todos os Detalhes</button>
+  
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

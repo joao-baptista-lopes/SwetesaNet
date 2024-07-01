@@ -1,0 +1,102 @@
+.linha-horizontal {
+    border-top: 5px solid var(--azul-claro);
+    width: 50px;
+    display: inline-block;
+    margin-right: 10px;
+    opacity: 1;
+  }
+  span {
+    color: var(--laranja);
+  }
+  .titulo-noticias {
+    display: inline-block;
+    color: var(--laranja);
+   font-family: "Montserrat";
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+    
+    h3 {
+      color: var(--azul-escuro);
+      font-family: "Montserrat";
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 150%;
+    }
+  
+    .texto{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center!important;
+      margin-bottom: 97px;
+    }
+  
+    //cards canais
+    .canais-cards{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,
+       minmax(min(11.25rem, 100%), 1fr));
+       grid-gap: 1.625rem!important;
+       //template structure
+       justify-items: center;
+    }
+  
+    //canal singular
+    .canal{
+      background: var(--azul-claro);
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center!important;
+      text-align: center;
+      align-items: center;
+      padding-left: 37px;
+      padding-right: 37px;
+      padding-top: 32px;
+      border-radius: 8px;
+      padding-bottom: 32px;
+  
+      img{
+        width: 116px;
+    
+      }
+  
+      h3{
+        font-size: 18px;
+        color: white;
+        font-family: 'Montserrat'!important;
+        font-weight: 600px!important;
+      }
+  
+      p{
+        font-size: 14px;
+        color: white;
+        font-family: 'Montserrat'!important;
+        font-weight: 600px!important;
+      }
+    }
+  
+    .canais{
+      
+      padding-bottom: 124px;
+    }
+
+    .canal img {
+      width: 116px;
+      vertical-align: middle; /* Alinha verticalmente a imagem */
+      margin-bottom: 16px; /* Adiciona margem na parte inferior da imagem */
+    }
+    
+    
+    .canal h3 {
+      margin-bottom: 8px; /* Adiciona margem na parte inferior do título */
+    }
+    
+    .canal p {
+      margin-bottom: 0; /* Remove a margem inferior do parágrafo */
+    }

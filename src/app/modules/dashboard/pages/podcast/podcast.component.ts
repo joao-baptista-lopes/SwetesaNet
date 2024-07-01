@@ -4,6 +4,10 @@ import { NgFor } from '@angular/common';
 import { PodcastPlayerComponent } from '../../components/podcast/podcast-player/podcast-player.component';
 import { PodcastCardBannerComponent } from '../../components/podcast/podcast-card-banner/podcast-card-banner.component';
 import { PodcastHeaderComponent } from '../../components/podcast/podcast-header/podcast-header.component';
+import { PodcastBannerComponent } from './components/podcast-banner/podcast-banner.component';
+import { PrestadorPerfilComponent } from './components/prestador-perfil/prestador-perfil.component';
+import { RouterLink } from '@angular/router';
+import { CadastroPrestadorComponent } from './components/cadastro-prestador/cadastro-prestador.component';
 
 @Component({
     selector: 'app-podcast',
@@ -15,6 +19,10 @@ import { PodcastHeaderComponent } from '../../components/podcast/podcast-header/
         PodcastPlayerComponent,
         NgFor,
         PodcastCardItemComponent,
+        PodcastBannerComponent,
+        PrestadorPerfilComponent,
+        RouterLink,
+        CadastroPrestadorComponent
     ],
 })
 export class PodcastComponent {

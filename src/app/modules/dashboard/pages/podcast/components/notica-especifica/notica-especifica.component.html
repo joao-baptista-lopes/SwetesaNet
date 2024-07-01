@@ -1,0 +1,42 @@
+<!-- <div class="banner" style="background-image: url('assets/images/Fundo-azul-website.jpeg');">
+    <div class="texto">
+        <h5>
+            <div class="d-flex align-items-center">
+                <hr class="linha-horizontal">
+                <p class="titulo-noticias">Vitrine Swetesa</p>
+            </div>
+        </h5>
+        <h3 style="font-size: 24px; margin-bottom: 12px;">Titulo da notícia</h3>
+        <p style="color: #201d1d; font-weight: 600; text-wrap: wrap;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos nihil voluptate et labore repellat aut fugit velit neque modi. Totam, voluptate maiores quis atque facere architecto nostrum, cumque, reprehenderit asperiores ducimus nisi consequatur maxime.</p>
+    </div>
+</div> -->
+
+<div class="noticia" *ngIf="noticia">
+  <div class="ava-main-container ava-startpage-container">
+    <div class="ms-Grid"> 
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12 ms-u-md12 ms-u-lg12">
+          <!-- 1-column: --> 
+          <div class="ava-image-text-banner">
+            <div class="ava-banner-image"><img src="https://image.ibb.co/naNqCa/news_b.png" alt=""></div>
+            <div class="ava-banner-txt-wrap">
+              <div class="ava-banner-txt-cont">
+                <div class="ava-banner-txt">
+                  <h1>{{noticia.titulo}} </h1>
+                  <p>{{noticia.sumario}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="corpo">
+<div class="corpo-text">
+{{noticia.descricao}}
+</div>
+
+</div>
+</div>

@@ -6,3 +6,24 @@
   color: #e11d48;
   @apply px-1 pt-1 text-xs;
 }
+
+.botao{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+button{
+  width: 239px;
+  border-radius: 17px;
+  padding: 19px;
+  background: #0d304c;
+  color: white;
+}
+
+button :hover{
+  background: #0f3a5e;
+  color: rgb(251, 246, 246);
+}

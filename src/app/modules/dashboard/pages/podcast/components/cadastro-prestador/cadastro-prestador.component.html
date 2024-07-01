@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Form Styling</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    /* background: url(assets/images/Fundo-azul-website.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    background: #f2efe3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .main {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600!important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="main">
+  <h2>Cadastrar Prestadores</h2>
+
+  <div class="signup">
+    <form (ngSubmit)="onSubmit(prestadorForm)" #prestadorForm="ngForm">
+      <input type="text" name="nome" placeholder="Nome" ngModel required>
+      <input type="text" name="profissao" placeholder="Profissão" ngModel>
+      <input type="text" name="contacto" placeholder="Número" ngModel>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+  
+  

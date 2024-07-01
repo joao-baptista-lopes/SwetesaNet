@@ -1,0 +1,344 @@
+// .cabecalho{
+//     width: 100%;
+//     background-size: cover;
+//     background-position: right;
+//     background-repeat: no-repeat;
+//     max-height: auto;
+//     padding: 40px;
+// }
+
+// .noticias{
+//     padding: 100px;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     gap: 40px;
+//     flex-wrap: wrap;
+// }
+
+// .card-body{
+//     width: 250px;
+// }
+
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400, 600";
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  background: linear-gradient(to right, #c471ed, #12c2e9);
+}
+
+.card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fafafa;
+  border: 0px;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 6px 10px 5px -1px rgba(194,179,194,0.78);
+-moz-box-shadow: 6px 10px 5px -1px rgba(194,179,194,0.78);
+box-shadow: 6px 10px 5px -1px rgba(194,179,194,0.78);
+}
+
+.card .card-img {
+  height: auto;
+  width: 100%;
+  background-color: #4426a8;
+  position: relative;
+  background-size: cover;
+  background-position: center top;
+}
+
+.card:hover {
+  transition: all .35s;
+  transform: translate3d(0, -5px, 0);
+}
+
+.card .card-content span {
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: block;
+}
+
+.card svg {
+  position: absolute;
+  top: 0;
+}
+
+.card .card-content {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 10px 20px 30px 20px;
+  position: relative;
+  overflow-y: hidden;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.card .card-content .bttn {
+  display: inline-block;
+  padding: 7px 8px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #39454b;
+  text-decoration: none;
+  color: #fff;
+  transition: 300ms all;
+}
+
+.card .card-content .bttn:hover {
+  background-color: #3e4c53;
+  color: #fff;
+}
+
+.card .card-content p:first-of-type {
+  margin-top: 0px;
+  text-align: left;
+}
+
+.linha-horizontal {
+  border-top: 5px solid var(--azul-claro);
+  width: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  opacity: 1;
+}
+span {
+  color: var(--laranja);
+}
+.titulo-noticias {
+  display: inline-block;
+  color: var(--laranja);
+ font-family: "Montserrat";
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+  
+  h3 {
+    color: var(--azul-escuro);
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%;
+  }
+
+  .texto{
+    // margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center!important;
+    margin-bottom: 97px;
+  }
+
+  //DESTAQUE
+
+//   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+// * {
+// 	padding: 0;
+// 	margin: 0;
+// 	box-sizing: border-box;
+// }
+
+// body {
+// 	font-family: "Inter", sans-serif;
+// }
+
+// :root {
+// 	--light: #ffe6e6;
+// 	--dark: #0c0c0c;
+// }
+
+// .container {
+// 	--bg-color: radial-gradient(
+// 		circle at 50% 0%,
+// 		rgba(50, 50, 50, 1) 0%,
+// 		rgba(12, 12, 12, 1) 100%
+// 	);
+
+// 	overflow: clip;
+// 	position: relative;
+
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+
+// 	padding: 2rem 5rem;
+
+// 	width: 100%;
+// 	height: 100dvh;
+// }
+
+// .category_container {
+// 	--gap: 0.5rem;
+
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	flex-wrap: nowrap;
+// 	gap: calc(var(--gap) * 2);
+
+// 	width: 100%;
+// 	height: 100%;
+// }
+
+// .content {
+// 	--active: 0;
+
+// 	cursor: pointer;
+// 	overflow: clip;
+
+// 	position: relative;
+// 	z-index: 10;
+
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: flex-end;
+// 	gap: 1.5rem;
+
+// 	padding: 2.5rem;
+
+// 	width: calc((100% / 3) - var(--gap));
+// 	height: 100%;
+
+// 	border-radius: 1rem;
+
+// 	transition: width 0.5s ease-in-out;
+// }
+// .content:hover {
+// 	--active: 1;
+
+// 	width: calc(70% - var(--gap));
+// }
+// .content::before {
+// 	content: "";
+
+// 	position: absolute;
+// 	z-index: -10;
+// 	top: 0;
+// 	left: 0;
+
+// 	width: 100%;
+// 	height: 100%;
+// 	background-color: #292a2b;
+
+// 	opacity: 0.6;
+// }
+
+// .content img {
+// 	position: absolute;
+// 	z-index: -20;
+// 	top: 0;
+// 	left: 0;
+
+// 	width: 100%;
+// 	height: 100%;
+
+// 	object-fit: cover;
+// 	object-position: center;
+// }
+
+// .content .profile_image {
+// 	opacity: calc(1 - var(--active));
+
+// 	transition: opacity 0.3s ease-in-out;
+// }
+
+// .profile_detail {
+// 	display: flex;
+// 	flex-direction: column;
+// 	gap: 0.5rem;
+
+// 	width: 20rem;
+// 	transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+// }
+
+// .profile_detail span {
+// 	font-size: 1.5rem;
+// 	font-weight: 600;
+// 	color: var(--light);
+// 	text-wrap: nowrap;
+// }
+
+// .profile_detail p {
+// 	font-size: 0.75rem;
+// 	font-weight: 500;
+// 	color: var(--light);
+// }
+
+// .profile_quote {
+// 	width: 22rem;
+// 	transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
+// }
+
+// .profile_quote p {
+// 	font-size: 1.5rem;
+// 	font-weight: 600;
+// 	color: var(--light);
+
+// 	transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
+
+// 	transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.1s;
+// }
+
+// .wrapper {
+// 	display: grid;
+//   	grid-template-rows: 0fr;
+//   	overflow: hidden;
+// 	transition: grid-template-rows 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+// }
+
+// .profile_quote { 
+// 	min-height: 0; 
+// 	transform: translateY(50%);
+// 	opacity: 0;
+// 	transition: 
+// 		opacity 0.8s ease-in-out,
+// 		transform 0.8s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s
+// 	;	
+// }
+
+// .content:hover .wrapper {
+//   	grid-template-rows: 1fr;
+// }
+
+// .content:hover .profile_quote {
+// 	transform: none;
+// 	opacity: 1;	
+// }
+
+
+
+
+
+
+
+
+// dialog { position: absolute; z-index: 1; background: none; color: white; border: 0; font-size: .8rem; padding:.5em;}
+// dialog a { color: whitesmoke; }
+
+
+.gradient {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(243, 244, 246, 0.1),
+    rgba(0, 0, 0, 0.8)
+  );
+}

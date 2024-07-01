@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ThemeService } from './core/services/theme.service';
 import { RouterOutlet } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { ResponsiveHelperComponent } from './shared/components/responsive-helper/responsive-helper.component';
+import { ContentfulService } from './shared/services/contentful.service';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,8 +12,17 @@ import { ResponsiveHelperComponent } from './shared/components/responsive-helper
   standalone: true,
   imports: [NgClass, RouterOutlet, ResponsiveHelperComponent],
 })
-export class AppComponent {
-  title = 'Angular Tailwind';
+export class AppComponent  {
 
-  constructor(public themeService: ThemeService) {}
+  // prestadores$! : Observable<any>;
+  title = 'SwetesaNet';
+
+  constructor(public themeService: ThemeService,
+    // private contentful : ContentfulService
+  ) {}
+
+  // ngOnInit(){
+  //   this.contentful.logContent('ze4hzdh065gy')
+  //   this.prestadores$ = this.contentful.getContent('ze4hzdh065gy')
+  // }
 }
