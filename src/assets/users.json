@@ -12,6 +12,10 @@
         "password": "password3"
     },
     {
+        "email":"heuricioManuel@joao.com",
+        "password":"1234566"
+    },
+    {
         "email": "jane.smith@example.com",
         "password": "password4"
     },
