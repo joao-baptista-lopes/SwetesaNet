@@ -38,11 +38,11 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 export class ProfileMenuComponent implements OnInit {
   public isOpen = false;
   public profileMenu = [
-    {
-      title: 'Seu perfil',
-      icon: './assets/icons/heroicons/outline/user-circle.svg',
-      link: '/profile',
-    },
+    // {
+    //   title: 'Seu perfil',
+    //   icon: './assets/icons/heroicons/outline/user-circle.svg',
+    //   link: '/profile',
+    // },
     {
       title: 'Terminar sessão',
       icon: './assets/icons/heroicons/outline/logout.svg',
