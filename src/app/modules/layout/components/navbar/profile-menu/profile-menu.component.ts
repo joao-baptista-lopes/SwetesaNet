@@ -81,7 +81,7 @@ export class ProfileMenuComponent implements OnInit {
   //   },
   // ];
 
-  // public themeMode = ['light', 'dark'];
+  public themeMode = ['light', 'dark'];
 
   constructor(public themeService: ThemeService) {}
 
