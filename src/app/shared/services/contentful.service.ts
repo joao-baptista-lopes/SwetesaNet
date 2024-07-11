@@ -54,7 +54,8 @@ export class ContentfulService {
           nome: { 'en-US': prestador.nome },
           profissao: { 'en-US': prestador.profissao },
           descricao: {'en-US': prestador.descricao},
-          contacto: {'en-US': prestador.contacto}
+          contacto: {'en-US': prestador.contacto},
+          slug: {'en-US': prestador.slug}
         }
       }))
       .then(entry => entry.publish())

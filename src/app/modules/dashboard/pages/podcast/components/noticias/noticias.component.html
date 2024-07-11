@@ -38,7 +38,7 @@
       <!-- <h1 class="text-5xl font-extrabold mb-8 text-center text-indigo-700">Tailwind CSS news hero #2</h1> -->
       <div class="flex flex-col md:flex-row md:h-96 md:-mx-1.5">
         <div *ngFor="let news of noticias.slice(0,3)" class="w-full md:w-1/2 md:mx-1.5 h-72 md:h-full rounded-md relative group mb-3 md:mb-0">
-          <a href="#" class="h-full block group relative rounded-md">
+          <a [routerLink]="['/dashboard/noticias', news.fields.slug]" class="h-full block group relative rounded-md">
             <img *ngIf="news.fields.imagem" [src]="news.fields.imagem.fields.file.url" alt="{{ news.fields.titulo }}"class="absolute z-0 object-cover w-full h-72 md:h-full rounded-md">
             <div class="absolute gradient w-full h-72 md:h-full rounded-md z-10"></div>
             <div class="absolute left-0 right-0 bottom-0 p-4 z-30">
@@ -85,7 +85,7 @@
       
       <!-- cards -->
       <div style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap; padding: 40px;">
-        <div class="card" *ngFor="let noticia of noticias" style="width: 400px;" >
+        <div class="card" *ngFor="let noticia of noticias.slice(4)" style="width: 400px;" >
    <img class="card-img" *ngIf="noticia.fields.imagem" [src]="noticia.fields.imagem.fields.file.url" alt="{{ noticia.fields.titulo }}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 449">
               <path

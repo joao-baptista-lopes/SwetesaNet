@@ -19,7 +19,8 @@ export class CadastroPrestadorComponent {
     const prestador = {
       nome: form.value.nome,
       profissao: form.value.profissao,
-      contacto: form.value.contacto
+      contacto: form.value.contacto,
+      slug : form.value.slug
     };
 
     this.contentfulService.createPrestador(prestador)
