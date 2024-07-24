@@ -51,7 +51,7 @@ export interface User {
   providedIn: 'root'
 })
 export class AuthService {
-  private usersUrl = 'assets/users.json'; // URL to web api
+  private usersUrl = 'http://localhost:3000/users'; // Atualize a URL para apontar para o json-server
 
   constructor(private http: HttpClient) {}
 
@@ -59,51 +59,31 @@ export class AuthService {
     return this.http.get<User[]>(this.usersUrl);
   }
 
-  loginUser(email: string, password: string): Observable<boolean> {
-    return new Observable<boolean>((observer) => {
-      this.getUsers().subscribe((users) => {
-        const user = users.find(u => u.email === email && u.password === password);
-        if (user) {
-          observer.next(true); // usuário autenticado
+  addUser(newUser: User): Observable<boolean> {
+    return this.getUsers().pipe(
+      map(users => {
+        const userExists = users.some(user => user.email === newUser.email);
+        if (userExists) {
+          return false; // Usuário já existe
         } else {
-          observer.next(false); // usuário não encontrado ou senha incorreta
-        }
-        observer.complete();
-      }, (error) => {
-        observer.error(error);
-      });
-    });
-  }
-
-  // Adiciona um novo usuário ao arquivo JSON
-  registerUser(newUser: User): Observable<boolean> {
-    return new Observable<boolean>((observer) => {
-      this.getUsers().subscribe((users) => {
-        const userExists = users.some(u => u.email === newUser.email);
-        if (!userExists) {
-          users.push(newUser);
-          // Simulação de gravação no arquivo JSON
-          // Você precisa configurar um backend real para fazer a persistência de dados corretamente.
-          this.saveUsers(users).subscribe(() => {
-            observer.next(true); // usuário cadastrado com sucesso
-            observer.complete();
-          }, (error) => {
-            observer.error(error);
+          // Enviar uma solicitação POST para adicionar o novo usuário
+          this.http.post<User>(this.usersUrl, newUser).subscribe({
+            next: (response) => console.log('Usuário adicionado:', response),
+            error: (error) => console.error('Erro ao adicionar usuário:', error)
           });
-        } else {
-          observer.next(false); // usuário já existe
-          observer.complete();
+          return true;
         }
-      }, (error) => {
-        observer.error(error);
-      });
-    });
+      })
+    );
   }
 
-  // Simulação de gravação no arquivo JSON (substitua isso por uma chamada real para o backend)
-  private saveUsers(users: User[]): Observable<void> {
-    // Aqui você deve implementar a chamada real para salvar os dados no backend
-    return of(undefined); // Remova isso e adicione a implementação real
+  login(email: string, password: string): Observable<boolean> {
+    return this.getUsers().pipe(
+      map(users => {
+        const user = users.find(u => u.email === email && u.password === password);
+        return !!user; // Retorna true se o usuário for encontrado
+      })
+    );
   }
 }
 

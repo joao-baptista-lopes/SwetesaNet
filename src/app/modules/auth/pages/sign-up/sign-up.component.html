@@ -1,18 +1,27 @@
+<!-- Formulário do prestador -->
 <form (ngSubmit)="onSubmit()">
+  <!-- Texto de email -->
   <label for="email">Email:</label>
+  <!-- Campo de email -->
   <input type="email" id="email" name="email" [(ngModel)]="email" required>
 
+  <!-- Texto de senha -->
   <label for="password">Senha:</label>
+  <!-- Campo da senha -->
   <input type="password" id="password" name="password" [(ngModel)]="password" required>
 
+  <!-- Botão de envio do cadastro -->
   <div class="botao">
     <button type="submit">Cadastrar</button>
   </div>
 </form>
 
+<!-- Mensagem de erro -->
 <div *ngIf="registerError" class="error-message">
   Falha ao cadastrar usuário.
 </div>
+
+<!-- Mensagem de sucesso -->
 <div *ngIf="registerSuccess" class="success-message">
   Cadastro realizado com sucesso!
 </div>

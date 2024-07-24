@@ -12,7 +12,7 @@ interface User {
   providedIn: 'root'
 })
 export class UserService {
-  private usersUrl = 'assets/users.json';
+  private usersUrl = 'http://localhost:3000/users'; // Atualize a URL para apontar para o json-server
 
   constructor(private http: HttpClient) {}
 
@@ -27,10 +27,11 @@ export class UserService {
         if (userExists) {
           return false; // Usuário já existe
         } else {
-          users.push(newUser);
-          // Aqui simulamos a escrita no arquivo JSON
-          // Em uma aplicação real, você enviaria isso a um servidor
-          console.log('Usuário adicionado:', newUser);
+          // Enviar uma solicitação POST para adicionar o novo usuário
+          this.http.post<User>(this.usersUrl, newUser).subscribe({
+            next: (response) => console.log('Usuário adicionado:', response),
+            error: (error) => console.error('Erro ao adicionar usuário:', error)
+          });
           return true;
         }
       })

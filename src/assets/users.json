@@ -1,55 +1,31 @@
 [
     {
         "email": "user1@example.com",
-        "password": "password1"
+        "password": "BP-YKIEEOX4"
     },
     {
         "email": "user2@example.com",
-        "password": "password2"
+        "password": "BP-QCLS0SD2"
     },
     {
         "email": "john.doe@example.com",
-        "password": "password3"
+        "password": "BP-JDA7NY8S"
     },
     {
         "email":"heuricioManuel@joao.com",
-        "password":"1234566"
+        "password":"BP-L0PDSFTH"
     },
     {
         "email": "jane.smith@example.com",
-        "password": "password4"
+        "password": "BP-S51GQ8WH"
     },
     {
         "email": "michael.johnson@example.com",
-        "password": "password5"
+        "password": "BP-CH62SZLJ"
     },
     {
         "email": "emily.davis@example.com",
-        "password": "password6"
-    },
-    {
-        "email": "david.wilson@example.com",
-        "password": "password7"
-    },
-    {
-        "email": "laura.martinez@example.com",
-        "password": "password8"
-    },
-    {
-        "email": "robert.brown@example.com",
-        "password": "password9"
-    },
-    {
-        "email": "susan.lee@example.com",
-        "password": "password10"
-    },
-    {
-        "email": "james.white@example.com",
-        "password": "password11"
-    },
-    {
-        "email": "linda.harris@example.com",
-        "password": "password12"
+        "password": "BP-8SIUM3QF"
     }
 ]
   

@@ -21,7 +21,7 @@ export class SignInComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit(): void {
-    this.authService.loginUser(this.email, this.password).subscribe(
+    this.authService.login(this.email, this.password).subscribe(
       (authenticated) => {
         if (authenticated) {
           // Redirecionar para a página de dashboard após a autenticação bem-sucedida

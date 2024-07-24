@@ -16,13 +16,10 @@
 
 //   ngOnInit(): void {}
 // }
-
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { NgClass, NgIf } from '@angular/common';
-import { AngularSvgIconModule } from 'angular-svg-icon';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ButtonComponent } from '../../../../shared/components/button/button.component';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService, User } from 'src/app/shared/services/auth.service';
 
 @Component({
@@ -30,7 +27,7 @@ import { AuthService, User } from 'src/app/shared/services/auth.service';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss'],
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, RouterLink, AngularSvgIconModule, NgClass, NgIf, ButtonComponent],
+  imports:[FormsModule, CommonModule]
 })
 export class SignUpComponent {
   email: string = '';
@@ -40,24 +37,34 @@ export class SignUpComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
+  private isPasswordValid(password: string): boolean {
+    const regex = /^BP-[A-Z0-9]{8}$/;
+    return regex.test(password);
+  }
+
   onSubmit(): void {
+    if (!this.isPasswordValid(this.password)) {
+      this.registerError = true;
+      this.registerSuccess = false;
+      return;
+    }
+
     const newUser: User = { email: this.email, password: this.password };
-    this.authService.registerUser(newUser).subscribe(
+    this.authService.addUser(newUser).subscribe(
       (registered) => {
         if (registered) {
-          // Redirecionar para a página de login após o cadastro bem-sucedido
           this.registerSuccess = true;
-          this.router.navigate(['/login']);
+          this.registerError = false;
         } else {
-          // Exibir mensagem de erro
           this.registerError = true;
+          this.registerSuccess = false;
         }
       },
       (error) => {
         console.error('Erro ao cadastrar usuário', error);
-        this.registerError = true; // Exibir mensagem de erro em caso de erro na requisição
+        this.registerError = true;
+        this.registerSuccess = false;
       }
     );
   }
 }
-

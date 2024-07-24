@@ -53,7 +53,6 @@ export class ContentfulService {
         fields: {
           nome: { 'en-US': prestador.nome },
           profissao: { 'en-US': prestador.profissao },
-          descricao: {'en-US': prestador.descricao},
           contacto: {'en-US': prestador.contacto},
           slug: {'en-US': prestador.slug}
         }
